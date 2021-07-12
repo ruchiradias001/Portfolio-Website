@@ -12,7 +12,7 @@ body
     color: rgba(255,255,255,0.5)
 }
 
-h1,h3
+h1,h3,h4
 {
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -20,9 +20,14 @@ h1,h3
     text-transform: uppercase;
 }
 
-p
+h5, p
 {
     text-align: center;
+}
+
+h5
+{
+    color: white; 
 }
 
 .navbar-brand
@@ -60,7 +65,7 @@ ul
     justify-content: center;
 }
 
-.flex-center-column
+.flex-center-column, .card-head
 {
 	display: flex;
     align-items: center;
@@ -68,20 +73,26 @@ ul
     flex-direction: column;
 }
 
+nav
+{
+    background-color: rgb(48, 48, 48);
+}
+
 section
 {
     min-height: 100vh;
 }
 
-#hero
+#hero, #me, #projects
 {
     margin-top: 74px;
 }
 
-/* navigation */
-nav
+.card
 {
-    background-color: rgb(48, 48, 48);
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 15px;
+	box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.8);
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -90,13 +101,37 @@ nav
     {
         width: 100%;
     }
+    .my-photo
+    {
+        width: 75%;
+    }
+    .intro
+    {
+        width: 100%;
+    }
+    .ieeecs-logo
+    {
+        width: 75%;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .wallpaper, .discription
+    .wallpaper, .discription, .intro, .ieeecs-logo, .exp-discription
     {
         width: 75%;
+    }
+    .my-photo
+    {
+        width: 50%;
+    }
+    .card-head
+    {
+        height: 150px;
+    }
+    .card-body
+    {
+        height: 250px;
     }
 }
 
@@ -105,5 +140,17 @@ nav
     .wallpaper, .discription
     {
         width: 50%;
+    }
+    .my-photo, .intro, .ieeecs-logo, .exp-discription
+    {
+        width: 75%;
+    }
+    .card-head
+    {
+        height: 150px;
+    }
+    .card-body
+    {
+        height: 220px;
     }
 }
